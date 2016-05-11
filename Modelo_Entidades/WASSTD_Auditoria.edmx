@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WASSTD_Auditoria.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="WASSTD_AuditoriaStoreContainer">
+    <EntitySet Name="Auditorias_Log" EntityType="WASSTD_Auditoria.Store.Auditorias_Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Auditorias_Tramites" EntityType="WASSTD_Auditoria.Store.Auditorias_Tramites" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Auditoria_Detalles_Tramites" EntityType="WASSTD_Auditoria.Store.Auditoria_Detalles_Tramites" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Auditorias_Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="accion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Auditorias_Tramites">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="id_tramite" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoTramite" Type="bit" Nullable="false" />
+    <Property Name="enviadoPor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dni_cuil_cliente" Type="int" Nullable="false" />
+    <Property Name="accion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_tramite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Auditoria_Detalles_Tramites">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="id_tramite" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="detalle_anterior" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fecha_detalle_anterior" Type="datetime" Nullable="false" />
+    <Property Name="accion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_tramite" Type="int" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="WASSTD_Auditoria" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="WASSTD_AuditoriaContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Auditorias_Log" EntityType="WASSTD_Auditoria.Auditoria_Log" />
+          <EntitySet Name="Auditorias_Tramites" EntityType="WASSTD_Auditoria.Auditoria_Tramite" />
+          <EntitySet Name="Auditoria_Detalles_Tramites" EntityType="WASSTD_Auditoria.Auditoria_Detalles_Tramite" />
+        </EntityContainer>
+        <EntityType Name="Auditoria_Log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="usuario" Nullable="false" />
+          <Property Type="DateTime" Name="fecha" Nullable="false" />
+          <Property Type="String" Name="accion" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Auditoria_Tramite">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="id_tramite" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Boolean" Name="Tipo_Tramite_id" Nullable="false" />
+          <Property Type="String" Name="Estado_id" Nullable="false" />
+          <Property Type="Int32" Name="Persona_DNI" Nullable="false" />
+          <Property Type="String" Name="accion" Nullable="false" />
+          <Property Name="usuario" Type="String" Nullable="false" />
+          <Property Name="id_tramite" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Auditoria_Detalles_Tramite">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="id_tramite" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="detalle_anterior" Type="String" Nullable="false" />
+          <Property Name="usuario" Type="String" Nullable="false" />
+          <Property Name="fecha_detalle_anterior" Type="DateTime" Nullable="false" />
+          <Property Name="accion" Type="String" Nullable="false" />
+          <Property Name="id_tramite" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WASSTD_AuditoriaStoreContainer" CdmEntityContainer="WASSTD_AuditoriaContainer">
+    <EntitySetMapping Name="Auditorias_Log">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTD_Auditoria.Auditoria_Log)">
+        <MappingFragment StoreEntitySet="Auditorias_Log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Auditorias_Tramites">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTD_Auditoria.Auditoria_Tramite)">
+        <MappingFragment StoreEntitySet="Auditorias_Tramites">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_tramite" ColumnName="id_tramite" />
+          <ScalarProperty Name="Tipo_Tramite_id" ColumnName="tipoTramite" />
+          <ScalarProperty Name="Estado_id" ColumnName="enviadoPor" />
+          <ScalarProperty Name="Persona_DNI" ColumnName="dni_cuil_cliente" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Auditoria_Detalles_Tramites">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTD_Auditoria.Auditoria_Detalles_Tramite)">
+        <MappingFragment StoreEntitySet="Auditoria_Detalles_Tramites">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_tramite" ColumnName="id_tramite" />
+          <ScalarProperty Name="detalle_anterior" ColumnName="detalle_anterior" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="fecha_detalle_anterior" ColumnName="fecha_detalle_anterior" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="WASSTD_Auditoria" >
+        <EntityTypeShape EntityType="WASSTD_Auditoria.Auditoria_Log" Width="2.25" PointX="0.75" PointY="0.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="WASSTD_Auditoria.Auditoria_Tramite" Width="2.125" PointX="3.75" PointY="0.75" Height="2.3648893229166665" />
+        <EntityTypeShape EntityType="WASSTD_Auditoria.Auditoria_Detalles_Tramite" Width="2.375" PointX="6.875" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

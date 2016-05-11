@@ -1,0 +1,1088 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WASSTDModelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="WASSTDModeloStoreContainer">
+    <EntitySet Name="Usuarios" EntityType="WASSTDModelo.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Grupos" EntityType="WASSTDModelo.Store.Grupos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Perfiles" EntityType="WASSTDModelo.Store.Perfiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Permisos" EntityType="WASSTDModelo.Store.Permisos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Formularios" EntityType="WASSTDModelo.Store.Formularios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modulos" EntityType="WASSTDModelo.Store.Modulos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personas" EntityType="WASSTDModelo.Store.Personas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidades" EntityType="WASSTDModelo.Store.Localidades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Provincias" EntityType="WASSTDModelo.Store.Provincias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Estados" EntityType="WASSTDModelo.Store.Estados" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Direcciones" EntityType="WASSTDModelo.Store.Direcciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tipos_Documentos" EntityType="WASSTDModelo.Store.Tipos_Documentos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tramites" EntityType="WASSTDModelo.Store.Tramites" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Detalles_Tramites" EntityType="WASSTDModelo.Store.Detalles_Tramites" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tipos_Personas" EntityType="WASSTDModelo.Store.Tipos_Personas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tipos_Tramites" EntityType="WASSTDModelo.Store.Tipos_Tramites" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuariosGrupos" EntityType="WASSTDModelo.Store.UsuarioGrupo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_UsuariosGrupos_Usuario" Association="WASSTDModelo.Store.FK_UsuarioGrupo_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="UsuarioGrupo" EntitySet="UsuariosGrupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosGrupos_Grupo" Association="WASSTDModelo.Store.FK_UsuarioGrupo_Grupo">
+      <End Role="Grupo" EntitySet="Grupos" />
+      <End Role="UsuarioGrupo" EntitySet="UsuariosGrupos" />
+    </AssociationSet>
+    <AssociationSet Name="PerfilesGrupos" Association="WASSTDModelo.Store.PerfilGrupo">
+      <End Role="Perfil" EntitySet="Perfiles" />
+      <End Role="Grupo" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="PerfilesPermisos" Association="WASSTDModelo.Store.PerfilPermiso">
+      <End Role="Perfil" EntitySet="Perfiles" />
+      <End Role="Permiso" EntitySet="Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="PerfilesFormularios" Association="WASSTDModelo.Store.PerfilFormulario">
+      <End Role="Perfil" EntitySet="Perfiles" />
+      <End Role="Formulario" EntitySet="Formularios" />
+    </AssociationSet>
+    <AssociationSet Name="FormulariosModulos" Association="WASSTDModelo.Store.FormularioModulo">
+      <End Role="Formulario" EntitySet="Formularios" />
+      <End Role="Modulo" EntitySet="Modulos" />
+    </AssociationSet>
+    <AssociationSet Name="ProvinciasLocalidades" Association="WASSTDModelo.Store.ProvinciaLocalidades">
+      <End Role="Provincia" EntitySet="Provincias" />
+      <End Role="Localidad" EntitySet="Localidades" />
+    </AssociationSet>
+    <AssociationSet Name="PersonasDirecciones" Association="WASSTDModelo.Store.PersonaDirecciones">
+      <End Role="Persona" EntitySet="Personas" />
+      <End Role="Direccion" EntitySet="Direcciones" />
+    </AssociationSet>
+    <AssociationSet Name="Tipos_DocumentosPersonas" Association="WASSTDModelo.Store.Tipo_DocumentoPersona">
+      <End Role="Tipo_Documento" EntitySet="Tipos_Documentos" />
+      <End Role="Persona" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="EstadosPersonas" Association="WASSTDModelo.Store.EstadoPersona">
+      <End Role="Estado" EntitySet="Estados" />
+      <End Role="Persona" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="LocalidadesDirecciones" Association="WASSTDModelo.Store.LocalidadDireccion">
+      <End Role="Localidad" EntitySet="Localidades" />
+      <End Role="Direccion" EntitySet="Direcciones" />
+    </AssociationSet>
+    <AssociationSet Name="Detalles_del_Tramite" Association="WASSTDModelo.Store.Detalles_del_Tramite">
+      <End Role="Detalles_Tramite" EntitySet="Detalles_Tramites" />
+      <End Role="Tramite" EntitySet="Tramites" />
+    </AssociationSet>
+    <AssociationSet Name="TramitesPersonas" Association="WASSTDModelo.Store.TramitesPersona">
+      <End Role="Tramite" EntitySet="Tramites" />
+      <End Role="Persona" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="Tipo_PersonaPersona" Association="WASSTDModelo.Store.Tipo_PersonaPersona">
+      <End Role="Tipo_Persona" EntitySet="Tipos_Personas" />
+      <End Role="Persona" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="Tipo_TramiteTramite" Association="WASSTDModelo.Store.Tipo_TramiteTramite">
+      <End Role="Tipo_Tramite" EntitySet="Tipos_Tramites" />
+      <End Role="Tramite" EntitySet="Tramites" />
+    </AssociationSet>
+    <AssociationSet Name="EstadoTramite" Association="WASSTDModelo.Store.EstadoTramite">
+      <End Role="Estado" EntitySet="Estados" />
+      <End Role="Tramite" EntitySet="Tramites" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_apellido" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="clave" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Perfiles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Grupo_id" Type="int" Nullable="false" />
+    <Property Name="Permiso_id" Type="int" Nullable="false" />
+    <Property Name="Formulario_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Permisos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Formularios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nombredemuestra" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Modulo_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modulos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personas">
+    <Key>
+      <PropertyRef Name="dni" />
+    </Key>
+    <Property Name="dni" Type="int" Nullable="false" />
+    <Property Name="nombre_apellido" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sexo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="telefono" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="celular" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="observaciones" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="clave_fiscal" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fecha_nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Tipo_PersonaId" Type="int" Nullable="false" />
+    <Property Name="Tipo_Documento_id" Type="int" Nullable="false" />
+    <Property Name="Estado_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Localidades">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cp" Type="int" Nullable="false" />
+    <Property Name="Provincia_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Provincias">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estados">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Direcciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="direccion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Persona_dni" Type="int" Nullable="false" />
+    <Property Name="Localidad_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipos_Documentos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tramites">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tipo_Tramite_id" Type="int" Nullable="false" />
+    <Property Name="Estado_id" Type="int" Nullable="false" />
+    <Property Name="Persona_dni" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Detalles_Tramites">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fecha_desde" Type="datetime" Nullable="true" />
+    <Property Name="TramiteId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipos_Personas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipos_Tramites">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioGrupo">
+    <Key>
+      <PropertyRef Name="Usuarios_id" />
+      <PropertyRef Name="Grupos_id" />
+    </Key>
+    <Property Name="Usuarios_id" Type="int" Nullable="false" />
+    <Property Name="Grupos_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="PerfilGrupo">
+    <End Role="Perfil" Type="WASSTDModelo.Store.Perfiles" Multiplicity="*" />
+    <End Role="Grupo" Type="WASSTDModelo.Store.Grupos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Perfil">
+        <PropertyRef Name="Grupo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PerfilPermiso">
+    <End Role="Perfil" Type="WASSTDModelo.Store.Perfiles" Multiplicity="*" />
+    <End Role="Permiso" Type="WASSTDModelo.Store.Permisos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Permiso">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Perfil">
+        <PropertyRef Name="Permiso_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PerfilFormulario">
+    <End Role="Perfil" Type="WASSTDModelo.Store.Perfiles" Multiplicity="*" />
+    <End Role="Formulario" Type="WASSTDModelo.Store.Formularios" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Formulario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Perfil">
+        <PropertyRef Name="Formulario_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormularioModulo">
+    <End Role="Formulario" Type="WASSTDModelo.Store.Formularios" Multiplicity="*" />
+    <End Role="Modulo" Type="WASSTDModelo.Store.Modulos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Formulario">
+        <PropertyRef Name="Modulo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProvinciaLocalidades">
+    <End Role="Provincia" Type="WASSTDModelo.Store.Provincias" Multiplicity="1" />
+    <End Role="Localidad" Type="WASSTDModelo.Store.Localidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Localidad">
+        <PropertyRef Name="Provincia_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonaDirecciones">
+    <End Role="Persona" Type="WASSTDModelo.Store.Personas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Direccion" Type="WASSTDModelo.Store.Direcciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="dni" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="Persona_dni" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tipo_DocumentoPersona">
+    <End Role="Tipo_Documento" Type="WASSTDModelo.Store.Tipos_Documentos" Multiplicity="1" />
+    <End Role="Persona" Type="WASSTDModelo.Store.Personas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Documento">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="Tipo_Documento_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EstadoPersona">
+    <End Role="Estado" Type="WASSTDModelo.Store.Estados" Multiplicity="1" />
+    <End Role="Persona" Type="WASSTDModelo.Store.Personas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="Estado_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LocalidadDireccion">
+    <End Role="Localidad" Type="WASSTDModelo.Store.Localidades" Multiplicity="1" />
+    <End Role="Direccion" Type="WASSTDModelo.Store.Direcciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="Localidad_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Detalles_del_Tramite">
+    <End Role="Detalles_Tramite" Type="WASSTDModelo.Store.Detalles_Tramites" Multiplicity="*" />
+    <End Role="Tramite" Type="WASSTDModelo.Store.Tramites" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Tramite">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Detalles_Tramite">
+        <PropertyRef Name="TramiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TramitesPersona">
+    <End Role="Tramite" Type="WASSTDModelo.Store.Tramites" Multiplicity="*" />
+    <End Role="Persona" Type="WASSTDModelo.Store.Personas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="dni" />
+      </Principal>
+      <Dependent Role="Tramite">
+        <PropertyRef Name="Persona_dni" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tipo_PersonaPersona">
+    <End Role="Tipo_Persona" Type="WASSTDModelo.Store.Tipos_Personas" Multiplicity="1" />
+    <End Role="Persona" Type="WASSTDModelo.Store.Personas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Persona">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="Tipo_PersonaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tipo_TramiteTramite">
+    <End Role="Tipo_Tramite" Type="WASSTDModelo.Store.Tipos_Tramites" Multiplicity="1" />
+    <End Role="Tramite" Type="WASSTDModelo.Store.Tramites" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Tramite">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tramite">
+        <PropertyRef Name="Tipo_Tramite_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EstadoTramite">
+    <End Role="Estado" Type="WASSTDModelo.Store.Estados" Multiplicity="1" />
+    <End Role="Tramite" Type="WASSTDModelo.Store.Tramites" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tramite">
+        <PropertyRef Name="Estado_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioGrupo_Usuario">
+    <End Role="Usuario" Type="WASSTDModelo.Store.Usuarios" Multiplicity="1" />
+    <End Role="UsuarioGrupo" Type="WASSTDModelo.Store.UsuarioGrupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsuarioGrupo">
+        <PropertyRef Name="Usuarios_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioGrupo_Grupo">
+    <End Role="UsuarioGrupo" Type="WASSTDModelo.Store.UsuarioGrupo" Multiplicity="*" />
+    <End Role="Grupo" Type="WASSTDModelo.Store.Grupos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsuarioGrupo">
+        <PropertyRef Name="Grupos_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WASSTDModelo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="WASSTDEntidades" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Usuarios" EntityType="WASSTDModelo.Usuario" />
+          <EntitySet Name="Grupos" EntityType="WASSTDModelo.Grupo" />
+          <AssociationSet Name="UsuariosGrupos" Association="WASSTDModelo.UsuarioGrupo">
+            <End Role="Usuario" EntitySet="Usuarios" />
+            <End Role="Grupo" EntitySet="Grupos" />
+          </AssociationSet>
+          <EntitySet Name="Perfiles" EntityType="WASSTDModelo.Perfil" />
+          <AssociationSet Name="PerfilesGrupos" Association="WASSTDModelo.PerfilGrupo">
+            <End Role="Perfil" EntitySet="Perfiles" />
+            <End Role="Grupo" EntitySet="Grupos" />
+          </AssociationSet>
+          <EntitySet Name="Permisos" EntityType="WASSTDModelo.Permiso" />
+          <AssociationSet Name="PerfilesPermisos" Association="WASSTDModelo.PerfilPermiso">
+            <End Role="Perfil" EntitySet="Perfiles" />
+            <End Role="Permiso" EntitySet="Permisos" />
+          </AssociationSet>
+          <EntitySet Name="Formularios" EntityType="WASSTDModelo.Formulario" />
+          <AssociationSet Name="PerfilesFormularios" Association="WASSTDModelo.PerfilFormulario">
+            <End Role="Perfil" EntitySet="Perfiles" />
+            <End Role="Formulario" EntitySet="Formularios" />
+          </AssociationSet>
+          <EntitySet Name="Modulos" EntityType="WASSTDModelo.Modulo" />
+          <AssociationSet Name="FormulariosModulos" Association="WASSTDModelo.FormularioModulo">
+            <End Role="Formulario" EntitySet="Formularios" />
+            <End Role="Modulo" EntitySet="Modulos" />
+          </AssociationSet>
+          <EntitySet Name="Personas" EntityType="WASSTDModelo.Persona" />
+          <EntitySet Name="Localidades" EntityType="WASSTDModelo.Localidad" />
+          <EntitySet Name="Provincias" EntityType="WASSTDModelo.Provincia" />
+          <AssociationSet Name="ProvinciasLocalidades" Association="WASSTDModelo.ProvinciaLocalidades">
+            <End Role="Provincia" EntitySet="Provincias" />
+            <End Role="Localidad" EntitySet="Localidades" />
+          </AssociationSet>
+          <EntitySet Name="Estados" EntityType="WASSTDModelo.Estado" />
+          <EntitySet Name="Direcciones" EntityType="WASSTDModelo.Direccion" />
+          <AssociationSet Name="PersonasDirecciones" Association="WASSTDModelo.PersonaDirecciones">
+            <End Role="Persona" EntitySet="Personas" />
+            <End Role="Direccion" EntitySet="Direcciones" />
+          </AssociationSet>
+          <EntitySet Name="Tipos_Documentos" EntityType="WASSTDModelo.Tipo_Documento" />
+          <AssociationSet Name="Tipos_DocumentosPersonas" Association="WASSTDModelo.Tipo_DocumentoPersona">
+            <End Role="Tipo_Documento" EntitySet="Tipos_Documentos" />
+            <End Role="Persona" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="EstadosPersonas" Association="WASSTDModelo.EstadoPersona">
+            <End Role="Estado" EntitySet="Estados" />
+            <End Role="Persona" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="LocalidadesDirecciones" Association="WASSTDModelo.LocalidadDireccion">
+            <End Role="Localidad" EntitySet="Localidades" />
+            <End Role="Direccion" EntitySet="Direcciones" />
+          </AssociationSet>
+          <EntitySet Name="Tramites" EntityType="WASSTDModelo.Tramite" />
+          <EntitySet Name="Detalles_Tramites" EntityType="WASSTDModelo.Detalles_Tramite" />
+          <AssociationSet Name="Detalles_del_Tramite" Association="WASSTDModelo.Detalles_del_Tramite">
+            <End Role="Detalles_Tramite" EntitySet="Detalles_Tramites" />
+            <End Role="Tramite" EntitySet="Tramites" />
+          </AssociationSet>
+          <AssociationSet Name="TramitesPersonas" Association="WASSTDModelo.TramitesPersona">
+            <End Role="Tramite" EntitySet="Tramites" />
+            <End Role="Persona" EntitySet="Personas" />
+          </AssociationSet>
+          <EntitySet Name="Tipos_Personas" EntityType="WASSTDModelo.Tipo_Persona" />
+          <AssociationSet Name="Tipo_PersonaPersona" Association="WASSTDModelo.Tipo_PersonaPersona">
+            <End Role="Tipo_Persona" EntitySet="Tipos_Personas" />
+            <End Role="Persona" EntitySet="Personas" />
+          </AssociationSet>
+          <EntitySet Name="Tipos_Tramites" EntityType="WASSTDModelo.Tipo_Tramite" />
+          <AssociationSet Name="Tipo_TramiteTramite" Association="WASSTDModelo.Tipo_TramiteTramite">
+            <End Role="Tipo_Tramite" EntitySet="Tipos_Tramites" />
+            <End Role="Tramite" EntitySet="Tramites" />
+          </AssociationSet>
+          <AssociationSet Name="EstadoTramite" Association="WASSTDModelo.EstadoTramite">
+            <End Role="Estado" EntitySet="Estados" />
+            <End Role="Tramite" EntitySet="Tramites" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_apellido" Nullable="false" Type="String" />
+          <Property Type="String" Name="clave" Nullable="false" />
+          <Property Name="email" Nullable="false" Type="String" />
+          <Property Type="Boolean" Name="estado" Nullable="false" />
+          <Property Type="String" Name="usuario" Nullable="false" />
+          <NavigationProperty Name="Grupos" Relationship="WASSTDModelo.UsuarioGrupo" FromRole="Usuario" ToRole="Grupo" />
+        </EntityType>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Usuarios" Relationship="WASSTDModelo.UsuarioGrupo" FromRole="Grupo" ToRole="Usuario" />
+          <NavigationProperty Name="Perfiles" Relationship="WASSTDModelo.PerfilGrupo" FromRole="Grupo" ToRole="Perfil" />
+        </EntityType>
+        <Association Name="UsuarioGrupo">
+          <End Type="WASSTDModelo.Usuario" Role="Usuario" Multiplicity="*" >
+          </End>
+          <End Type="WASSTDModelo.Grupo" Role="Grupo" Multiplicity="*" >
+          </End>
+        </Association>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Grupo" Relationship="WASSTDModelo.PerfilGrupo" FromRole="Perfil" ToRole="Grupo" />
+          <NavigationProperty Name="Permiso" Relationship="WASSTDModelo.PerfilPermiso" FromRole="Perfil" ToRole="Permiso" />
+          <NavigationProperty Name="Formulario" Relationship="WASSTDModelo.PerfilFormulario" FromRole="Perfil" ToRole="Formulario" />
+        </EntityType>
+        <Association Name="PerfilGrupo">
+          <End Type="WASSTDModelo.Perfil" Role="Perfil" Multiplicity="*" />
+          <End Type="WASSTDModelo.Grupo" Role="Grupo" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Permiso">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Perfiles" Relationship="WASSTDModelo.PerfilPermiso" FromRole="Permiso" ToRole="Perfil" />
+        </EntityType>
+        <Association Name="PerfilPermiso">
+          <End Type="WASSTDModelo.Perfil" Role="Perfil" Multiplicity="*" />
+          <End Type="WASSTDModelo.Permiso" Role="Permiso" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Formulario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Perfiles" Relationship="WASSTDModelo.PerfilFormulario" FromRole="Formulario" ToRole="Perfil" />
+          <NavigationProperty Name="Modulo" Relationship="WASSTDModelo.FormularioModulo" FromRole="Formulario" ToRole="Modulo" />
+          <Property Type="String" Name="nombredemuestra" Nullable="false" />
+        </EntityType>
+        <Association Name="PerfilFormulario">
+          <End Type="WASSTDModelo.Perfil" Role="Perfil" Multiplicity="*" />
+          <End Type="WASSTDModelo.Formulario" Role="Formulario" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Modulo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Formularios" Relationship="WASSTDModelo.FormularioModulo" FromRole="Modulo" ToRole="Formulario" />
+        </EntityType>
+        <Association Name="FormularioModulo">
+          <End Type="WASSTDModelo.Formulario" Role="Formulario" Multiplicity="*" />
+          <End Type="WASSTDModelo.Modulo" Role="Modulo" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="dni" />
+          </Key>
+          <Property Type="Int32" Name="dni" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Type="String" Name="nombre_apellido" Nullable="false" />
+          <Property Type="String" Name="sexo" Nullable="false" />
+          <Property Type="String" Name="telefono" Nullable="false" />
+          <Property Type="String" Name="celular" Nullable="false" />
+          <Property Type="String" Name="email1" Nullable="false" />
+          <Property Type="String" Name="observaciones" Nullable="false" />
+          <NavigationProperty Name="Direcciones" Relationship="WASSTDModelo.PersonaDirecciones" FromRole="Persona" ToRole="Direccion" />
+          <NavigationProperty Name="Tipo_Documento" Relationship="WASSTDModelo.Tipo_DocumentoPersona" FromRole="Persona" ToRole="Tipo_Documento" />
+          <NavigationProperty Name="Estado" Relationship="WASSTDModelo.EstadoPersona" FromRole="Persona" ToRole="Estado" />
+          <Property Name="clave_fiscal" Type="String" Nullable="false" />
+          <Property Name="fecha_nacimiento" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Tramites" Relationship="WASSTDModelo.TramitesPersona" FromRole="Persona" ToRole="Tramite" />
+          <NavigationProperty Name="Tipo_Persona" Relationship="WASSTDModelo.Tipo_PersonaPersona" FromRole="Persona" ToRole="Tipo_Persona" />
+          <Property Name="Tipo_PersonaId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Localidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nombre" Nullable="false" />
+          <NavigationProperty Name="Provincia" Relationship="WASSTDModelo.ProvinciaLocalidades" FromRole="Localidad" ToRole="Provincia" />
+          <Property Type="Int32" Name="cp" Nullable="false" />
+          <NavigationProperty Name="Direcciones" Relationship="WASSTDModelo.LocalidadDireccion" FromRole="Localidad" ToRole="Direccion" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Localidades" Relationship="WASSTDModelo.ProvinciaLocalidades" FromRole="Provincia" ToRole="Localidad" />
+          <Property Type="String" Name="nombre" Nullable="false" />
+        </EntityType>
+        <Association Name="ProvinciaLocalidades">
+          <End Type="WASSTDModelo.Provincia" Role="Provincia" Multiplicity="1" />
+          <End Type="WASSTDModelo.Localidad" Role="Localidad" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Personas" Relationship="WASSTDModelo.EstadoPersona" FromRole="Estado" ToRole="Persona" />
+          <NavigationProperty Name="Tramites" Relationship="WASSTDModelo.EstadoTramite" FromRole="Estado" ToRole="Tramite" />
+        </EntityType>
+        <EntityType Name="Direccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="direccion" Nullable="false" />
+          <NavigationProperty Name="Persona" Relationship="WASSTDModelo.PersonaDirecciones" FromRole="Direccion" ToRole="Persona" />
+          <NavigationProperty Name="Localidad" Relationship="WASSTDModelo.LocalidadDireccion" FromRole="Direccion" ToRole="Localidad" />
+        </EntityType>
+        <Association Name="PersonaDirecciones">
+          <End Type="WASSTDModelo.Persona" Role="Persona" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WASSTDModelo.Direccion" Role="Direccion" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Tipo_Documento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Personas" Relationship="WASSTDModelo.Tipo_DocumentoPersona" FromRole="Tipo_Documento" ToRole="Persona" />
+        </EntityType>
+        <Association Name="Tipo_DocumentoPersona">
+          <End Type="WASSTDModelo.Tipo_Documento" Role="Tipo_Documento" Multiplicity="1" />
+          <End Type="WASSTDModelo.Persona" Role="Persona" Multiplicity="*" />
+        </Association>
+        <Association Name="EstadoPersona">
+          <End Type="WASSTDModelo.Estado" Role="Estado" Multiplicity="1" />
+          <End Type="WASSTDModelo.Persona" Role="Persona" Multiplicity="*" />
+        </Association>
+        <Association Name="LocalidadDireccion">
+          <End Type="WASSTDModelo.Localidad" Role="Localidad" Multiplicity="1" />
+          <End Type="WASSTDModelo.Direccion" Role="Direccion" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Tramite">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Detalles_Tramite" Relationship="WASSTDModelo.Detalles_del_Tramite" FromRole="Tramite" ToRole="Detalles_Tramite" />
+          <NavigationProperty Name="Persona" Relationship="WASSTDModelo.TramitesPersona" FromRole="Tramite" ToRole="Persona" />
+          <NavigationProperty Name="Tipo_Tramite" Relationship="WASSTDModelo.Tipo_TramiteTramite" FromRole="Tramite" ToRole="Tipo_Tramite" />
+          <Property Name="Tipo_Tramite_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Estado" Relationship="WASSTDModelo.EstadoTramite" FromRole="Tramite" ToRole="Estado" />
+          <Property Name="Estado_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Detalles_Tramite">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" Nullable="false" />
+          <Property Name="fecha_desde" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="Tramite" Relationship="WASSTDModelo.Detalles_del_Tramite" FromRole="Detalles_Tramite" ToRole="Tramite" />
+          <Property Name="TramiteId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="Detalles_del_Tramite">
+          <End Type="WASSTDModelo.Detalles_Tramite" Role="Detalles_Tramite" Multiplicity="*" />
+          <End Type="WASSTDModelo.Tramite" Role="Tramite" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Tramite">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Detalles_Tramite">
+              <PropertyRef Name="TramiteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TramitesPersona">
+          <End Type="WASSTDModelo.Tramite" Role="Tramite" Multiplicity="*" />
+          <End Type="WASSTDModelo.Persona" Role="Persona" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Tipo_Persona">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" Nullable="false" />
+          <NavigationProperty Name="Personas" Relationship="WASSTDModelo.Tipo_PersonaPersona" FromRole="Tipo_Persona" ToRole="Persona" />
+        </EntityType>
+        <Association Name="Tipo_PersonaPersona">
+          <End Type="WASSTDModelo.Tipo_Persona" Role="Tipo_Persona" Multiplicity="1" />
+          <End Type="WASSTDModelo.Persona" Role="Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Persona">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="Tipo_PersonaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Tipo_Tramite">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcion" Type="String" Nullable="false" />
+          <NavigationProperty Name="Tramite" Relationship="WASSTDModelo.Tipo_TramiteTramite" FromRole="Tipo_Tramite" ToRole="Tramite" />
+        </EntityType>
+        <Association Name="Tipo_TramiteTramite">
+          <End Type="WASSTDModelo.Tipo_Tramite" Role="Tipo_Tramite" Multiplicity="1" />
+          <End Type="WASSTDModelo.Tramite" Role="Tramite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Tramite">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tramite">
+              <PropertyRef Name="Tipo_Tramite_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EstadoTramite">
+          <End Type="WASSTDModelo.Estado" Role="Estado" Multiplicity="1" />
+          <End Type="WASSTDModelo.Tramite" Role="Tramite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tramite">
+              <PropertyRef Name="Estado_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WASSTDModeloStoreContainer" CdmEntityContainer="WASSTDEntidades">
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Usuario)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre_apellido" ColumnName="nombre_apellido" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Grupo)">
+        <MappingFragment StoreEntitySet="Grupos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfiles">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Perfil)">
+        <MappingFragment StoreEntitySet="Perfiles">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permisos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Permiso)">
+        <MappingFragment StoreEntitySet="Permisos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formularios">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Formulario)">
+        <MappingFragment StoreEntitySet="Formularios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombredemuestra" ColumnName="nombredemuestra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modulos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Modulo)">
+        <MappingFragment StoreEntitySet="Modulos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personas">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Persona)">
+        <MappingFragment StoreEntitySet="Personas">
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="nombre_apellido" ColumnName="nombre_apellido" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="email1" ColumnName="email1" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="clave_fiscal" ColumnName="clave_fiscal" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="Tipo_PersonaId" ColumnName="Tipo_PersonaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidades">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Localidad)">
+        <MappingFragment StoreEntitySet="Localidades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincias">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Provincia)">
+        <MappingFragment StoreEntitySet="Provincias">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estados">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Estado)">
+        <MappingFragment StoreEntitySet="Estados">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direcciones">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Direccion)">
+        <MappingFragment StoreEntitySet="Direcciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Documentos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Tipo_Documento)">
+        <MappingFragment StoreEntitySet="Tipos_Documentos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tramites">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Tramite)">
+        <MappingFragment StoreEntitySet="Tramites">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tipo_Tramite_id" ColumnName="Tipo_Tramite_id" />
+          <ScalarProperty Name="Estado_id" ColumnName="Estado_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalles_Tramites">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Detalles_Tramite)">
+        <MappingFragment StoreEntitySet="Detalles_Tramites">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_desde" ColumnName="fecha_desde" />
+          <ScalarProperty Name="TramiteId" ColumnName="TramiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Personas">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Tipo_Persona)">
+        <MappingFragment StoreEntitySet="Tipos_Personas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Tramites">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Tipo_Tramite)">
+        <MappingFragment StoreEntitySet="Tipos_Tramites">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsuariosGrupos" TypeName="WASSTDModelo.UsuarioGrupo" StoreEntitySet="UsuariosGrupos">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="id" ColumnName="Usuarios_id" />
+      </EndProperty>
+      <EndProperty Name="Grupo">
+        <ScalarProperty Name="id" ColumnName="Grupos_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesGrupos" TypeName="WASSTDModelo.PerfilGrupo" StoreEntitySet="Perfiles">
+      <EndProperty Name="Grupo">
+        <ScalarProperty Name="id" ColumnName="Grupo_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesPermisos" TypeName="WASSTDModelo.PerfilPermiso" StoreEntitySet="Perfiles">
+      <EndProperty Name="Permiso">
+        <ScalarProperty Name="id" ColumnName="Permiso_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesFormularios" TypeName="WASSTDModelo.PerfilFormulario" StoreEntitySet="Perfiles">
+      <EndProperty Name="Formulario">
+        <ScalarProperty Name="id" ColumnName="Formulario_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormulariosModulos" TypeName="WASSTDModelo.FormularioModulo" StoreEntitySet="Formularios">
+      <EndProperty Name="Modulo">
+        <ScalarProperty Name="id" ColumnName="Modulo_id" />
+      </EndProperty>
+      <EndProperty Name="Formulario">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProvinciasLocalidades" TypeName="WASSTDModelo.ProvinciaLocalidades" StoreEntitySet="Localidades">
+      <EndProperty Name="Provincia">
+        <ScalarProperty Name="id" ColumnName="Provincia_id" />
+      </EndProperty>
+      <EndProperty Name="Localidad">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonasDirecciones" TypeName="WASSTDModelo.PersonaDirecciones" StoreEntitySet="Direcciones">
+      <EndProperty Name="Persona">
+        <ScalarProperty Name="dni" ColumnName="Persona_dni" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Tipos_DocumentosPersonas" TypeName="WASSTDModelo.Tipo_DocumentoPersona" StoreEntitySet="Personas">
+      <EndProperty Name="Tipo_Documento">
+        <ScalarProperty Name="id" ColumnName="Tipo_Documento_id" />
+      </EndProperty>
+      <EndProperty Name="Persona">
+        <ScalarProperty Name="dni" ColumnName="dni" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EstadosPersonas" TypeName="WASSTDModelo.EstadoPersona" StoreEntitySet="Personas">
+      <EndProperty Name="Estado">
+        <ScalarProperty Name="id" ColumnName="Estado_id" />
+      </EndProperty>
+      <EndProperty Name="Persona">
+        <ScalarProperty Name="dni" ColumnName="dni" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LocalidadesDirecciones" TypeName="WASSTDModelo.LocalidadDireccion" StoreEntitySet="Direcciones">
+      <EndProperty Name="Localidad">
+        <ScalarProperty Name="id" ColumnName="Localidad_id" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TramitesPersonas" TypeName="WASSTDModelo.TramitesPersona" StoreEntitySet="Tramites">
+      <EndProperty Name="Persona">
+        <ScalarProperty Name="dni" ColumnName="Persona_dni" />
+      </EndProperty>
+      <EndProperty Name="Tramite">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="WASSTD" ZoomLevel="74" ShowGrid="true" DisplayType="false">
+        <EntityTypeShape EntityType="WASSTDModelo.Usuario" Width="1.5" PointX="0.75" PointY="2.875" Height="2.085348307291667" />
+        <EntityTypeShape EntityType="WASSTDModelo.Grupo" Width="1.5" PointX="0.75" PointY="0.5" Height="1.5923063151041665" />
+        <AssociationConnector Association="WASSTDModelo.UsuarioGrupo">
+          <ConnectorPoint PointX="1.5" PointY="2.875" />
+          <ConnectorPoint PointX="1.5" PointY="2.0923063151041665" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSTDModelo.Perfil" Width="1.5" PointX="2.875" PointY="0.5" Height="1.5923063151041665" />
+        <AssociationConnector Association="WASSTDModelo.PerfilGrupo">
+          <ConnectorPoint PointX="2.875" PointY="1.2961531575520833" />
+          <ConnectorPoint PointX="2.25" PointY="1.2961531575520833" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSTDModelo.Permiso" Width="1.5" PointX="5.375" PointY="0.5" Height="1.427958984375" />
+        <AssociationConnector Association="WASSTDModelo.PerfilPermiso">
+          <ConnectorPoint PointX="4.375" PointY="1.2139794921875" />
+          <ConnectorPoint PointX="5.375" PointY="1.2139794921875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSTDModelo.Formulario" Width="1.5" PointX="2.875" PointY="2.875" Height="1.7566536458333326" />
+        <AssociationConnector Association="WASSTDModelo.PerfilFormulario">
+          <ConnectorPoint PointX="3.625" PointY="2.0923063151041665" />
+          <ConnectorPoint PointX="3.625" PointY="2.875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSTDModelo.Modulo" Width="1.5" PointX="5.375" PointY="2.875" Height="1.4279589843749996" />
+        <AssociationConnector Association="WASSTDModelo.FormularioModulo">
+          <ConnectorPoint PointX="4.375" PointY="3.5889794921875" />
+          <ConnectorPoint PointX="5.375" PointY="3.5889794921875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSTDModelo.Persona" Width="1.875" PointX="12.875" PointY="0.625" Height="5.2494108072916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="WASSTDModelo.Localidad" Width="1.875" PointX="7.875" PointY="3" Height="1.9802864583333335" />
+        <EntityTypeShape EntityType="WASSTDModelo.Provincia" Width="1.875" PointX="7.875" PointY="0.625" Height="1.5956835937499996" />
+        <AssociationConnector Association="WASSTDModelo.ProvinciaLocalidades">
+          <ConnectorPoint PointX="1.6875" PointY="9.97068359375" />
+          <ConnectorPoint PointX="1.6875" PointY="10.75" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSTDModelo.Estado" Width="1.875" PointX="10.25" PointY="2.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="WASSTDModelo.Direccion" Width="1.875" PointX="10.5" PointY="5.625" Height="1.7879850260416674" />
+        <AssociationConnector Association="WASSTDModelo.PersonaDirecciones" ManuallyRouted="false">
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSTDModelo.Tipo_Documento" Width="1.875" PointX="10.25" PointY="0.625" Height="1.5956835937499996" IsExpanded="true" />
+        <AssociationConnector Association="WASSTDModelo.Tipo_DocumentoPersona">
+          <ConnectorPoint PointX="5.25" PointY="8.172841796874998" />
+          <ConnectorPoint PointX="10.125" PointY="8.172841796874998" />
+        </AssociationConnector>
+        <AssociationConnector Association="WASSTDModelo.EstadoPersona">
+          <ConnectorPoint PointX="5.25" PointY="9.422841796875" />
+          <ConnectorPoint PointX="10.125" PointY="9.422841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="WASSTDModelo.LocalidadDireccion">
+          <ConnectorPoint PointX="1.6875" PointY="12.730286458333334" />
+          <ConnectorPoint PointX="1.6875" PointY="13.5" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSTDModelo.Tramite" Width="1.5" PointX="15.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WASSTDModelo.Detalles_Tramite" Width="1.5" PointX="17.5" PointY="1.5" />
+        <AssociationConnector Association="WASSTDModelo.Detalles_del_Tramite" />
+        <AssociationConnector Association="WASSTDModelo.TramitesPersona" />
+        <EntityTypeShape EntityType="WASSTDModelo.Tipo_Persona" Width="1.5" PointX="13.375" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="WASSTDModelo.Tipo_PersonaPersona" />
+        <EntityTypeShape EntityType="WASSTDModelo.Tipo_Tramite" Width="1.5" PointX="15.625" PointY="4.5" />
+        <AssociationConnector Association="WASSTDModelo.Tipo_TramiteTramite" />
+        <AssociationConnector Association="WASSTDModelo.EstadoTramite" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

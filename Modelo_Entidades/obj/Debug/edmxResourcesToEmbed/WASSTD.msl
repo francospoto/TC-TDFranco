@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WASSTDModeloStoreContainer" CdmEntityContainer="WASSTDEntidades">
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Usuario)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre_apellido" ColumnName="nombre_apellido" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Grupo)">
+        <MappingFragment StoreEntitySet="Grupos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfiles">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Perfil)">
+        <MappingFragment StoreEntitySet="Perfiles">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permisos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Permiso)">
+        <MappingFragment StoreEntitySet="Permisos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formularios">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Formulario)">
+        <MappingFragment StoreEntitySet="Formularios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombredemuestra" ColumnName="nombredemuestra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modulos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Modulo)">
+        <MappingFragment StoreEntitySet="Modulos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personas">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Persona)">
+        <MappingFragment StoreEntitySet="Personas">
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="nombre_apellido" ColumnName="nombre_apellido" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="email1" ColumnName="email1" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="clave_fiscal" ColumnName="clave_fiscal" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="Tipo_PersonaId" ColumnName="Tipo_PersonaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidades">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Localidad)">
+        <MappingFragment StoreEntitySet="Localidades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincias">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Provincia)">
+        <MappingFragment StoreEntitySet="Provincias">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estados">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Estado)">
+        <MappingFragment StoreEntitySet="Estados">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direcciones">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Direccion)">
+        <MappingFragment StoreEntitySet="Direcciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Documentos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Tipo_Documento)">
+        <MappingFragment StoreEntitySet="Tipos_Documentos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tramites">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Tramite)">
+        <MappingFragment StoreEntitySet="Tramites">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tipo_Tramite_id" ColumnName="Tipo_Tramite_id" />
+          <ScalarProperty Name="Estado_id" ColumnName="Estado_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalles_Tramites">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Detalles_Tramite)">
+        <MappingFragment StoreEntitySet="Detalles_Tramites">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_desde" ColumnName="fecha_desde" />
+          <ScalarProperty Name="TramiteId" ColumnName="TramiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Personas">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Tipo_Persona)">
+        <MappingFragment StoreEntitySet="Tipos_Personas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Tramites">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSTDModelo.Tipo_Tramite)">
+        <MappingFragment StoreEntitySet="Tipos_Tramites">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsuariosGrupos" TypeName="WASSTDModelo.UsuarioGrupo" StoreEntitySet="UsuariosGrupos">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="id" ColumnName="Usuarios_id" />
+      </EndProperty>
+      <EndProperty Name="Grupo">
+        <ScalarProperty Name="id" ColumnName="Grupos_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesGrupos" TypeName="WASSTDModelo.PerfilGrupo" StoreEntitySet="Perfiles">
+      <EndProperty Name="Grupo">
+        <ScalarProperty Name="id" ColumnName="Grupo_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesPermisos" TypeName="WASSTDModelo.PerfilPermiso" StoreEntitySet="Perfiles">
+      <EndProperty Name="Permiso">
+        <ScalarProperty Name="id" ColumnName="Permiso_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesFormularios" TypeName="WASSTDModelo.PerfilFormulario" StoreEntitySet="Perfiles">
+      <EndProperty Name="Formulario">
+        <ScalarProperty Name="id" ColumnName="Formulario_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormulariosModulos" TypeName="WASSTDModelo.FormularioModulo" StoreEntitySet="Formularios">
+      <EndProperty Name="Modulo">
+        <ScalarProperty Name="id" ColumnName="Modulo_id" />
+      </EndProperty>
+      <EndProperty Name="Formulario">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProvinciasLocalidades" TypeName="WASSTDModelo.ProvinciaLocalidades" StoreEntitySet="Localidades">
+      <EndProperty Name="Provincia">
+        <ScalarProperty Name="id" ColumnName="Provincia_id" />
+      </EndProperty>
+      <EndProperty Name="Localidad">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonasDirecciones" TypeName="WASSTDModelo.PersonaDirecciones" StoreEntitySet="Direcciones">
+      <EndProperty Name="Persona">
+        <ScalarProperty Name="dni" ColumnName="Persona_dni" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Tipos_DocumentosPersonas" TypeName="WASSTDModelo.Tipo_DocumentoPersona" StoreEntitySet="Personas">
+      <EndProperty Name="Tipo_Documento">
+        <ScalarProperty Name="id" ColumnName="Tipo_Documento_id" />
+      </EndProperty>
+      <EndProperty Name="Persona">
+        <ScalarProperty Name="dni" ColumnName="dni" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EstadosPersonas" TypeName="WASSTDModelo.EstadoPersona" StoreEntitySet="Personas">
+      <EndProperty Name="Estado">
+        <ScalarProperty Name="id" ColumnName="Estado_id" />
+      </EndProperty>
+      <EndProperty Name="Persona">
+        <ScalarProperty Name="dni" ColumnName="dni" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LocalidadesDirecciones" TypeName="WASSTDModelo.LocalidadDireccion" StoreEntitySet="Direcciones">
+      <EndProperty Name="Localidad">
+        <ScalarProperty Name="id" ColumnName="Localidad_id" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TramitesPersonas" TypeName="WASSTDModelo.TramitesPersona" StoreEntitySet="Tramites">
+      <EndProperty Name="Persona">
+        <ScalarProperty Name="dni" ColumnName="Persona_dni" />
+      </EndProperty>
+      <EndProperty Name="Tramite">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

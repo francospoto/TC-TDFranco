@@ -1,0 +1,7 @@
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Controladora\bin\Debug\Controladora.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Controladora\bin\Debug\Controladora.pdb
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Controladora\bin\Debug\Modelo_Entidades.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Controladora\bin\Debug\Modelo_Entidades.pdb
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Controladora\obj\Debug\Controladora.csprojResolveAssemblyReference.cache
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Controladora\obj\Debug\Controladora.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Controladora\obj\Debug\Controladora.pdb

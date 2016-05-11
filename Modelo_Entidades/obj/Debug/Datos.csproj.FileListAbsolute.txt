@@ -1,0 +1,6 @@
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Modelo_Entidades\bin\Debug\Modelo_Entidades.dll.config
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Modelo_Entidades\bin\Debug\Modelo_Entidades.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Modelo_Entidades\bin\Debug\Modelo_Entidades.pdb
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Modelo_Entidades\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Modelo_Entidades\obj\Debug\Modelo_Entidades.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\Modelo_Entidades\obj\Debug\Modelo_Entidades.pdb

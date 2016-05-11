@@ -1,0 +1,41 @@
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\WASS-Tramites Previsionales.exe.config
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\WASS-Tramites Previsionales.exe.manifest
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\WASS-Tramites Previsionales.application
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\WASS-Tramites Previsionales.exe
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\WASS-Tramites Previsionales.pdb
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Controladora.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Modelo_Entidades.dll
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Controladora.pdb
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\bin\Debug\Modelo_Entidades.pdb
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\Vista.csprojResolveAssemblyReference.cache
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.Reportes.FrmReportes.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmTramite.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.Tramites.FrmTramites.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.Botonera1.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmAuditoria.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmAuditorias.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmAuditoriaCuotas.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmCambiarClave.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmSeleccionPersonas.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmRecuperarClave.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmPersona.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmPersonas.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmGrupo.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmGrupos.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmLogin.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmPerfil.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmPerfiles.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmPrincipal.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmUsuario.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.FrmUsuarios.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASSTD.Properties.Resources.resources
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASS-Tramites Previsionales.exe.manifest
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASS-Tramites Previsionales.application
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASS-Tramites Previsionales.exe
+C:\Users\Dante\Documents\GitHub\WASSDiploma\WASS Diploma\WASSTD\obj\x86\Debug\WASS-Tramites Previsionales.pdb

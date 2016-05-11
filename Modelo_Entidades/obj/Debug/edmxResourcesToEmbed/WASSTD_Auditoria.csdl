@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="WASSTD_Auditoria" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="WASSTD_AuditoriaContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Auditorias_Log" EntityType="WASSTD_Auditoria.Auditoria_Log" />
+    <EntitySet Name="Auditorias_Tramites" EntityType="WASSTD_Auditoria.Auditoria_Tramite" />
+    <EntitySet Name="Auditoria_Detalles_Tramites" EntityType="WASSTD_Auditoria.Auditoria_Detalles_Tramite" />
+  </EntityContainer>
+  <EntityType Name="Auditoria_Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="usuario" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="String" Name="accion" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Auditoria_Tramite">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="id_tramite" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Boolean" Name="Tipo_Tramite_id" Nullable="false" />
+    <Property Type="String" Name="Estado_id" Nullable="false" />
+    <Property Type="Int32" Name="Persona_DNI" Nullable="false" />
+    <Property Type="String" Name="accion" Nullable="false" />
+    <Property Name="usuario" Type="String" Nullable="false" />
+    <Property Name="id_tramite" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Auditoria_Detalles_Tramite">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="id_tramite" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="detalle_anterior" Type="String" Nullable="false" />
+    <Property Name="usuario" Type="String" Nullable="false" />
+    <Property Name="fecha_detalle_anterior" Type="DateTime" Nullable="false" />
+    <Property Name="accion" Type="String" Nullable="false" />
+    <Property Name="id_tramite" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

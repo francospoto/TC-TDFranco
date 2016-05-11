@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WASSTD_Auditoria.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="WASSTD_AuditoriaStoreContainer">
+    <EntitySet Name="Auditorias_Log" EntityType="WASSTD_Auditoria.Store.Auditorias_Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Auditorias_Tramites" EntityType="WASSTD_Auditoria.Store.Auditorias_Tramites" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Auditoria_Detalles_Tramites" EntityType="WASSTD_Auditoria.Store.Auditoria_Detalles_Tramites" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Auditorias_Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="accion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Auditorias_Tramites">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="id_tramite" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoTramite" Type="bit" Nullable="false" />
+    <Property Name="enviadoPor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dni_cuil_cliente" Type="int" Nullable="false" />
+    <Property Name="accion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_tramite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Auditoria_Detalles_Tramites">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="id_tramite" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="detalle_anterior" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fecha_detalle_anterior" Type="datetime" Nullable="false" />
+    <Property Name="accion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_tramite" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>
